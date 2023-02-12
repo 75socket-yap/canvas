@@ -75,7 +75,7 @@ function onDestroyClick() {
 function onEraserClick() {
   ctx.strokeStyle = "white";
   isFilling = false;
-  modeBtn.innerText = "Draw";
+  modeBtn.innerText = "✒️ Draw";
 }
 
 function onFileChange(event) {
