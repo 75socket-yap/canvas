@@ -1,5 +1,4 @@
 const saveBtn = document.querySelector("#save");
-const textInput = document.querySelector("text");
 const fileInput = document.querySelector("#file");
 const modeBtn = document.querySelector("#mode-btn");
 const destroyBtn = document.querySelector("#destroy-btn");
