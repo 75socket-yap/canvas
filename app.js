@@ -112,3 +112,29 @@ destroyBtn.addEventListener("click", onDestroyClick);
 eraserBtn.addEventListener("click", onEraserClick);
 fileInput.addEventListener("change", onFileChange);
 saveBtn.addEventListener("click", onSaveClick);
+
+let undoStack = [];
+
+function onUndoKeyDown(event) {
+  if (event.ctrlKey && event.key === "z") {
+    undo();
+  }
+}
+
+function undo() {
+  if (undoStack.length > 0) {
+    const lastDraw = undoStack.pop();
+    ctx.putImageData(lastDraw, 0, 0);
+  }
+}
+
+function saveToUndoStack() {
+  undoStack.push(ctx.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT));
+}
+
+document.addEventListener("keydown", onUndoKeyDown);
+canvas.addEventListener("mousedown", () => {
+  if (isPainting) {
+    saveToUndoStack();
+  }
+});
