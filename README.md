@@ -1,5 +1,5 @@
 # Javascript Drawing Canvas 프로젝트
-https://75socket-yap.github.io/canvas/
+https://tidchron.github.io/canvas/
 
 그림을 그릴 수 있는 캔버스에 이미지 삽입과 드로잉, 저장을 구현한 프로젝트입니다.
 
